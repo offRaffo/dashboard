@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     options: {
                         responsive: true,
                         plugins: {
-                            title: { display: true, text: 'Numero Veicoli per Giorno' }
+                            title: { display: true, text: 'Número de vehículos al día' }
                         }
                     }
                 });
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     options: {
                         responsive: true,
                         plugins: {
-                            title: { display: true, text: 'Velocità Media e Massima per Giorno' }
+                            title: { display: true, text: 'Velocidad media y máxima por día' }
                         }
                     }
                 });
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 dateSelector.value = isoString;
                 dateSelector.min = new Date(uniqueDates[0]).toISOString().split('T')[0];
                 dateSelector.max = new Date(uniqueDates[uniqueDates.length - 1]).toISOString().split('T')[0];
-
+                dateSelector.value = '2025-04-15';
                 // Carica i dati iniziali
                 filterDataByDateRange(firstDate);
 
