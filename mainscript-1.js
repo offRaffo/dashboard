@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
         if (ctx) {
             // Colori originali delle porzioni
-            var originalColors = ['#FF0000', '#0000FF', '#00FF00'];
+            var originalColors = ['blue', 'green', 'purple'];
 
             // Creazione del grafico a torta
             var pieChart = new Chart(ctx, {
@@ -278,8 +278,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         const totalBikes = numBikes.reduce((a, b) => a + b, 0);
                         const totalEbikes = numEbikes.reduce((a, b) => a + b, 0);
                     
-                        pieChart.data.datasets[0].data = [totalScooters, totalBikes, totalEbikes];
-                        pieChart.update('active'); // o 'default', 'none'
+                        setTimeout(() => {
+                            pieChart.data.datasets[0].data = [totalScooters, totalBikes, totalEbikes];
+                            pieChart.update('active');
+                        }, 100); // o anche 200 ms
                     }
                     
                 }
@@ -307,9 +309,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: {
                         labels: [],
                         datasets: [
-                            { label: 'Max Speed Bikes', data: [], borderColor: 'orange', fill: false },
+                            { label: 'Max Speed Bikes', data: [], borderColor: 'green', fill: false },
                             { label: 'Avg Speed Bikes', data: [], borderColor: 'darkorange', fill: false },
-                            { label: 'Max Speed Scooters', data: [], borderColor: 'red', fill: false },
+                            { label: 'Max Speed Scooters', data: [], borderColor: 'blue', fill: false },
                             { label: 'Avg Speed Scooters', data: [], borderColor: 'darkred', fill: false }
                         ]
                     },
