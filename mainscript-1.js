@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var pieChart = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['Num Scooters', 'Num Bikes', 'Num Ebikes'],
+                    labels: ['Num patinete', 'Num bicicleta', 'Num Ebikes'],
                     datasets: [{
                         data: [0, 0, 0], // inizializza con 0, poi li aggiorni con `updatePieChart`,
                         backgroundColor: originalColors, // Usa direttamente i colori
@@ -292,8 +292,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: {
                         labels: [],
                         datasets: [
-                            { label: 'Num Scooters', data: [], backgroundColor: 'blue', borderColor: 'blue', fill: false },
-                            { label: 'Num Bikes', data: [], backgroundColor: 'green', borderColor: 'green', fill: false },
+                            { label: 'Num patinete', data: [], backgroundColor: 'blue', borderColor: 'blue', fill: false },
+                            { label: 'Num bicicleta', data: [], backgroundColor: 'green', borderColor: 'green', fill: false },
                             { label: 'Num Ebikes', data: [], backgroundColor: 'purple', borderColor: 'purple', fill: false }
                         ]
                     },
@@ -309,10 +309,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: {
                         labels: [],
                         datasets: [
-                            { label: 'Max Speed Bikes', data: [], borderColor: 'green', fill: false },
-                            { label: 'Avg Speed Bikes', data: [], borderColor: 'darkorange', fill: false },
-                            { label: 'Max Speed Scooters', data: [], borderColor: 'blue', fill: false },
-                            { label: 'Avg Speed Scooters', data: [], borderColor: 'darkred', fill: false }
+                            { label: 'Max velocidad bicicleta', data: [], borderColor: 'green', fill: false },
+                            { label: 'Velocidad promedia bicicleta', data: [], borderColor: 'darkorange', fill: false },
+                            { label: 'Max velocidad patinete', data: [], borderColor: 'blue', fill: false },
+                            { label: 'Velocidad promedia petinete', data: [], borderColor: 'darkred', fill: false }
                         ]
                     },
                     options: {
